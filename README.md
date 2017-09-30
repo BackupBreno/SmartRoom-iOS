@@ -1,0 +1,1 @@
+Projeto desenvolvido para automatização de um quarto. Esse aplicativo servirá como interface de controle para o usuario. Ele poderá enviar requisições para o sistema e fazer alguema configurações para tomada de decisão sem precisar enviar uma requisição pra ele.
