@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		2928B1206CC1183CF7992555 /* Pods_SmartRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */; };
+		551C67C11F80873E005BC2E4 /* SideBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C01F80873E005BC2E4 /* SideBar.storyboard */; };
+		551C67C31F80875B005BC2E4 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */; };
+		551C67C51F8087E9005BC2E4 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C41F8087E9005BC2E4 /* Strings.strings */; };
+		551C67C71F8087F5005BC2E4 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C61F8087F5005BC2E4 /* Colors.json */; };
+		551C67CD1F808970005BC2E4 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67CA1F808970005BC2E4 /* Strings.swift */; };
+		551C67CE1F808970005BC2E4 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67CB1F808970005BC2E4 /* Storyboards.swift */; };
+		551C67CF1F808970005BC2E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67CC1F808970005BC2E4 /* Colors.swift */; };
 		55C3E3461F801DFC00174710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E3451F801DFC00174710 /* AppDelegate.swift */; };
 		55C3E3481F801DFC00174710 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E3471F801DFC00174710 /* ViewController.swift */; };
 		55C3E34B1F801DFC00174710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E3491F801DFC00174710 /* Main.storyboard */; };
@@ -17,6 +24,13 @@
 
 /* Begin PBXFileReference section */
 		19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		551C67C01F80873E005BC2E4 /* SideBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideBar.storyboard; sourceTree = "<group>"; };
+		551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
+		551C67C41F8087E9005BC2E4 /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
+		551C67C61F8087F5005BC2E4 /* Colors.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		551C67CA1F808970005BC2E4 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		551C67CB1F808970005BC2E4 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		551C67CC1F808970005BC2E4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		55C3E3421F801DFC00174710 /* SmartRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C3E3451F801DFC00174710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C3E3471F801DFC00174710 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +54,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		551C67BD1F808707005BC2E4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				551C67BE1F808714005BC2E4 /* Generators */,
+				55C3E34C1F801DFC00174710 /* Assets.xcassets */,
+				55C3E34E1F801DFC00174710 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		551C67BE1F808714005BC2E4 /* Generators */ = {
+			isa = PBXGroup;
+			children = (
+				551C67C41F8087E9005BC2E4 /* Strings.strings */,
+				551C67C61F8087F5005BC2E4 /* Colors.json */,
+			);
+			path = Generators;
+			sourceTree = "<group>";
+		};
+		551C67BF1F808725005BC2E4 /* SideBar */ = {
+			isa = PBXGroup;
+			children = (
+				551C67C01F80873E005BC2E4 /* SideBar.storyboard */,
+				551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */,
+			);
+			path = SideBar;
+			sourceTree = "<group>";
+		};
+		551C67C81F8087FA005BC2E4 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				551C67CC1F808970005BC2E4 /* Colors.swift */,
+				551C67CB1F808970005BC2E4 /* Storyboards.swift */,
+				551C67CA1F808970005BC2E4 /* Strings.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
 		55C3E3391F801DFC00174710 = {
 			isa = PBXGroup;
 			children = (
@@ -61,12 +113,13 @@
 		55C3E3441F801DFC00174710 /* SmartRoom */ = {
 			isa = PBXGroup;
 			children = (
+				55C3E3511F801DFC00174710 /* Info.plist */,
 				55C3E3451F801DFC00174710 /* AppDelegate.swift */,
 				55C3E3471F801DFC00174710 /* ViewController.swift */,
 				55C3E3491F801DFC00174710 /* Main.storyboard */,
-				55C3E34C1F801DFC00174710 /* Assets.xcassets */,
-				55C3E34E1F801DFC00174710 /* LaunchScreen.storyboard */,
-				55C3E3511F801DFC00174710 /* Info.plist */,
+				551C67BF1F808725005BC2E4 /* SideBar */,
+				551C67C81F8087FA005BC2E4 /* Generated */,
+				551C67BD1F808707005BC2E4 /* Supporting Files */,
 			);
 			path = SmartRoom;
 			sourceTree = "<group>";
@@ -96,6 +149,7 @@
 			buildConfigurationList = 55C3E3541F801DFC00174710 /* Build configuration list for PBXNativeTarget "SmartRoom" */;
 			buildPhases = (
 				5DA06CFCF6485E2643C4DE04 /* [CP] Check Pods Manifest.lock */,
+				551C67C91F80882D005BC2E4 /* SwiftGen */,
 				55C3E33E1F801DFC00174710 /* Sources */,
 				55C3E33F1F801DFC00174710 /* Frameworks */,
 				55C3E3401F801DFC00174710 /* Resources */,
@@ -153,12 +207,29 @@
 				55C3E3501F801DFC00174710 /* LaunchScreen.storyboard in Resources */,
 				55C3E34D1F801DFC00174710 /* Assets.xcassets in Resources */,
 				55C3E34B1F801DFC00174710 /* Main.storyboard in Resources */,
+				551C67C51F8087E9005BC2E4 /* Strings.strings in Resources */,
+				551C67C11F80873E005BC2E4 /* SideBar.storyboard in Resources */,
+				551C67C71F8087F5005BC2E4 /* Colors.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		551C67C91F80882D005BC2E4 /* SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftGen;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftgen >/dev/null; then\nswiftgen strings -t structured-swift3 \"$PROJECT_DIR/$PROJECT_NAME/Supporting Files/Generators/Strings.strings\" --output \"$PROJECT_DIR/$PROJECT_NAME/Generated/Strings.swift\"\nswiftgen colors -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/Supporting Files/Generators/Colors.json\" --output \"$PROJECT_DIR/$PROJECT_NAME/Generated/Colors.swift\"\nswiftgen storyboards -t swift3 \"$PROJECT_DIR/$PROJECT_NAME/\" --output \"$PROJECT_DIR/$PROJECT_NAME/Generated/Storyboards.swift\"\nelse\necho \"warning: SwiftGen not installed, download it from https://github.com/SwiftGen/SwiftGen\"\nfi";
+		};
 		5DA06CFCF6485E2643C4DE04 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,9 +254,22 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SmartRoom/Pods-SmartRoom-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/SlideMenuControllerSwift/SlideMenuControllerSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SlideMenuControllerSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -215,6 +299,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C3E3481F801DFC00174710 /* ViewController.swift in Sources */,
+				551C67CF1F808970005BC2E4 /* Colors.swift in Sources */,
+				551C67CE1F808970005BC2E4 /* Storyboards.swift in Sources */,
+				551C67C31F80875B005BC2E4 /* SideBarTableViewController.swift in Sources */,
+				551C67CD1F808970005BC2E4 /* Strings.swift in Sources */,
 				55C3E3461F801DFC00174710 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

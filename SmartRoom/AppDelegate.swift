@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+//        let controllerSideBar = StoryboardScene.SideBar.sideBarControllerID.instantiate()
+//
+//        let controllerPerfil = StoryboardScene.Main.perfilViewControllerID.instantiate()
+//        
+//
+//        let navigationControllerPerfil: UINavigationController = UINavigationController(rootViewController: controllerPerfil)
+//
+//        let slideBarController = CustomSlideBarController(mainViewController: navigationControllerPerfil, leftMenuViewController: controllerSideBar)
+//
+//
+//        self.window?.rootViewController = slideBarController
+//
+//        self.window?.makeKeyAndVisible()
+        
         return true
     }
 
