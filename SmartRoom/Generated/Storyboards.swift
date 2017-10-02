@@ -57,10 +57,14 @@ enum StoryboardScene {
   enum Main: StoryboardType {
     static let storyboardName = "Main"
 
-    static let initialScene = InitialSceneType<ViewController>(storyboard: Main.self)
+    static let initialScene = InitialSceneType<SmartRoom.PanelViewController>(storyboard: Main.self)
+
+    static let panelViewControllerID = SceneType<SmartRoom.PanelViewController>(storyboard: Main.self, identifier: "panelViewControllerID")
   }
   enum SideBar: StoryboardType {
     static let storyboardName = "SideBar"
+
+    static let sideBarControllerID = SceneType<SmartRoom.SideBarTableViewController>(storyboard: SideBar.self, identifier: "sideBarControllerID")
   }
 }
 

@@ -8,6 +8,8 @@
 
 import UIKit
 
+let baseURL = "http://192.168.0.13/"
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -16,19 +18,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-//        let controllerSideBar = StoryboardScene.SideBar.sideBarControllerID.instantiate()
-//
-//        let controllerPerfil = StoryboardScene.Main.perfilViewControllerID.instantiate()
-//        
-//
-//        let navigationControllerPerfil: UINavigationController = UINavigationController(rootViewController: controllerPerfil)
-//
-//        let slideBarController = CustomSlideBarController(mainViewController: navigationControllerPerfil, leftMenuViewController: controllerSideBar)
-//
-//
-//        self.window?.rootViewController = slideBarController
-//
-//        self.window?.makeKeyAndVisible()
+        let controllerSideBar = StoryboardScene.SideBar.sideBarControllerID.instantiate()
+        
+        let controllerPanel = StoryboardScene.Main.panelViewControllerID.instantiate()
+        
+        
+        let navifationControllerPanel: UINavigationController = UINavigationController(rootViewController: controllerPanel)
+        
+        let slideBarController = CustomSlideBarController(mainViewController: navifationControllerPanel, leftMenuViewController: controllerSideBar)
+        
+        
+        self.window?.rootViewController = slideBarController
+        
+        self.window?.makeKeyAndVisible()
         
         return true
     }

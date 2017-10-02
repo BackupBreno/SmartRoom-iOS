@@ -12,7 +12,7 @@
         <!--Side Bar Table View Controller-->
         <scene sceneID="r09-Bq-79i">
             <objects>
-                <tableViewController id="p9x-xu-5dK" customClass="SideBarTableViewController" customModule="SmartRoom" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="sideBarControllerID" id="p9x-xu-5dK" customClass="SideBarTableViewController" customModule="SmartRoom" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="KvA-Pq-XDI">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
