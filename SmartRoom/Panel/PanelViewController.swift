@@ -8,18 +8,18 @@
 
 import UIKit
 
-class PanelViewController: UIViewController, LightSystemServiceDelegate {
+class PanelViewController: UIViewController, LightServiceDelegate {
     
     var isLightOn = false
     
     @IBOutlet weak var lightControl: UIButton!
     
-    var serviceLightSystem: LightSystemService!
+    var serviceLightSystem: LightService!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.serviceLightSystem = LightSystemService(delegate: self)
+        self.serviceLightSystem = LightService(delegate: self)
     }
     
     // MARK: - Actions
@@ -30,13 +30,13 @@ class PanelViewController: UIViewController, LightSystemServiceDelegate {
             
             self.lightControl.setImage(#imageLiteral(resourceName: "Light_Off"), for: .normal)
             
-            self.serviceLightSystem.postLightSystemGreen(turnOnLed: false)
+            self.serviceLightSystem.postLight(turnOnLed: false)
             
         } else {
             
             self.lightControl.setImage(#imageLiteral(resourceName: "Light_On"), for: .normal)
             
-            self.serviceLightSystem.postLightSystemGreen(turnOnLed: true )
+            self.serviceLightSystem.postLight(turnOnLed: true )
         }
         
         self.isLightOn = !self.isLightOn
@@ -44,13 +44,13 @@ class PanelViewController: UIViewController, LightSystemServiceDelegate {
     
     // MARK: - Requests
     
-    func postLightSystemGreenSuccess() {
+    func postLightSuccess() {
         
-        print("Led ON")
+        print("Success")
     }
     
-    func postLightSystemGreenFailure() {
+    func postLightFailure() {
         
-        print("Led OFF")
+        print("Failure")
     }
 }

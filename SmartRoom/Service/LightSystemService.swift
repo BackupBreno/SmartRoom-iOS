@@ -10,39 +10,39 @@ import Foundation
 import Alamofire
 import AlamofireObjectMapper
 
-protocol LightSystemServiceDelegate {
+protocol LightServiceDelegate {
     
-    func postLightSystemGreenSuccess()
+    func postLightSuccess()
     
-    func postLightSystemGreenFailure()
+    func postLightFailure()
 }
 
-class LightSystemService {
+class LightService {
     
-    var delegate: LightSystemServiceDelegate!
+    var delegate: LightServiceDelegate!
     
-    var postLightSystemRequest: Request?
+    var postLightRequest: Request?
     
-    init(delegate: LightSystemServiceDelegate) {
+    init(delegate: LightServiceDelegate) {
         
         self.delegate = delegate
     }
     
-    func postLightSystemGreen(turnOnLed: Bool) {
+    func postLight(turnOnLed: Bool) {
         
-        self.postLightSystemRequest?.cancel()
+        self.postLightRequest?.cancel()
         
-        self.postLightSystemRequest = RequestFactory.postLedSystemGreenState(state: turnOnLed ? 1 : 0)?.validate().responseObject(completionHandler: { (response: DataResponse<Light>) in
+        self.postLightRequest = RequestFactory.postLightState(state: turnOnLed ? 1 : 0)?.validate().responseObject(completionHandler: { (response: DataResponse<Light>) in
             
             switch response.result {
                 
             case .success:
                 
-                self.delegate.postLightSystemGreenSuccess()
+                self.delegate.postLightSuccess()
                 
             case .failure:
                 
-                self.delegate.postLightSystemGreenFailure()
+                self.delegate.postLightFailure()
             }
         })
     }

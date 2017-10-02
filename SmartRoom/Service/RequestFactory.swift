@@ -11,7 +11,7 @@ import AlamofireObjectMapper
 
 class RequestFactory {
     
-    static func postLedSystemGreenState(state: Int) -> DataRequest? {
+    static func postLightState(state: Int) -> DataRequest? {
         
         let params: Parameters = ["active" : state]
         
