@@ -23,14 +23,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let controllerPanel = StoryboardScene.Main.panelViewControllerID.instantiate()
         
         
-        let navifationControllerPanel: UINavigationController = UINavigationController(rootViewController: controllerPanel)
+        let navigationControllerPanel: UINavigationController = UINavigationController(rootViewController: controllerPanel)
         
-        let slideBarController = CustomSlideBarController(mainViewController: navifationControllerPanel, leftMenuViewController: controllerSideBar)
+        let slideBarController = CustomSlideBarController(mainViewController:navigationControllerPanel, leftMenuViewController: controllerSideBar)
         
         
         self.window?.rootViewController = slideBarController
         
         self.window?.makeKeyAndVisible()
+        
+        
+        UINavigationBar.appearance().barTintColor = UIColor(red: 80.0/255, green: 80.0/255, blue: 80.0/255, alpha: 1)
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+//        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
+        
+        UINavigationBar.appearance().isOpaque = true
         
         return true
     }

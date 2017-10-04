@@ -8,6 +8,11 @@ import Foundation
 enum L10n {
   /// Smart Room
   static let appTitle = L10n.tr("Strings", "app_title")
+
+  enum Panel {
+    /// Painel de Controle
+    static let title = L10n.tr("Strings", "panel.title")
+  }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length nesting type_body_length type_name
 

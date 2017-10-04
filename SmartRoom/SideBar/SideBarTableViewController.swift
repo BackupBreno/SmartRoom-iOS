@@ -41,7 +41,7 @@ class SideBarTableViewController: UITableViewController {
         switch indexPath.row {
         case 0:
             
-            self.slideMenuController()?.changeMainViewController(self.panelViewController, close: true)
+            self.slideMenuController()?.changeMainViewController(panelViewController, close: true)
             
         default:
             break

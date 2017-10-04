@@ -17,8 +17,5 @@ class CustomSlideBarController: SlideMenuController {
         SlideMenuOptions.leftViewWidth = 210
         
         SlideMenuOptions.animationDuration = 0.5
-        
-        SlideMenuOptions.hideStatusBar = false
-        
     }
 }

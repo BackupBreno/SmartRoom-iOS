@@ -18,7 +18,9 @@ class PanelViewController: UIViewController, LightServiceDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.title = L10n.Panel.title
+        
         self.serviceLightSystem = LightService(delegate: self)
     }
     
