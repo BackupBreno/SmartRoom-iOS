@@ -39,7 +39,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
-        
         UINavigationBar.appearance().isOpaque = true
         
         
