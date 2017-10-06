@@ -27,6 +27,8 @@ class PanelViewController: UIViewController {
     
     @IBOutlet weak var restartView: UIView!
     
+    @IBOutlet weak var tvView: UIView!
+    
     // MARK: - LifeCycle
     
     override func viewDidLoad() {
@@ -83,6 +85,9 @@ class PanelViewController: UIViewController {
             
             self.modemService.postModem(turnOnModem: true)
         }
+    }
+    
+    @IBAction func tvPowerButton(_ sender: Any) {
     }
 }
 

@@ -20,6 +20,8 @@ class Room: Object, Mappable {
     
     @objc dynamic var modemIsOn: Bool = true
     
+    @objc dynamic var airIsOn: Bool = false
+    
     required convenience init?(map: Map) {
         
         self.init()
@@ -32,10 +34,11 @@ class Room: Object, Mappable {
     
     func mapping(map: Map) {
         
-        self.name           <-   map["roomName"]
+        self.name          <-   map["roomName"]
         self.lightIsOn     <-  (map["light"], StateTransform())
         self.routerIsOn    <-  (map["router"], StateTransform())
         self.modemIsOn     <-  (map["modem"], StateTransform())
+        self.airIsOn       <-  (map["air"], StateTransform())
     }
 }
 
