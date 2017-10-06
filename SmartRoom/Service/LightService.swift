@@ -28,15 +28,20 @@ class LightService {
         self.delegate = delegate
     }
     
-    func postLight(turnOnLed: Bool) {
+    func postLight(turnOnLight: Bool) {
         
         self.postLightRequest?.cancel()
         
-        self.postLightRequest = RequestFactory.postLightState(state: turnOnLed ? 1 : 0)?.validate().responseObject(completionHandler: { (response: DataResponse<Light>) in
+        self.postLightRequest = RequestFactory.postLight(state: turnOnLight ? 1 : 0)?.validate().responseObject(completionHandler: { (response: DataResponse<Intermediary>) in
             
             switch response.result {
                 
             case .success:
+                
+                if let light = response.value {
+                    
+                    Room.updateLight(state: light.state)
+                }
                 
                 self.delegate.postLightSuccess()
                 

@@ -18,34 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-9d-Qbb">
-                                <rect key="frame" x="23" y="582" width="153" height="65"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mhJ-Rf-Vvg">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="65"/>
-                                        <state key="normal" title="Reiniciar (20s)">
-                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="mhJ-Rf-Vvg" secondAttribute="bottom" id="0NP-Pm-Ds6"/>
-                                    <constraint firstItem="mhJ-Rf-Vvg" firstAttribute="leading" secondItem="VWc-9d-Qbb" secondAttribute="leading" id="269-wT-jOw"/>
-                                    <constraint firstAttribute="height" constant="65" id="Af3-7v-Olg"/>
-                                    <constraint firstAttribute="trailing" secondItem="mhJ-Rf-Vvg" secondAttribute="trailing" id="Oz9-Wr-IAJ"/>
-                                    <constraint firstAttribute="width" constant="153" id="YtD-WX-XhH"/>
-                                    <constraint firstItem="mhJ-Rf-Vvg" firstAttribute="top" secondItem="VWc-9d-Qbb" secondAttribute="top" id="vuk-MN-ntc"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="15"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
-                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U2O-k0-og0">
                                 <rect key="frame" x="23" y="229" width="65" height="65"/>
                                 <subviews>
@@ -160,6 +132,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cLz-X4-qbQ">
                                         <rect key="frame" x="7" y="7" width="51" height="51"/>
                                         <state key="normal" image="Router"/>
+                                        <connections>
+                                            <action selector="routerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VnN-fO-xft"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -187,6 +162,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="byj-bS-ciG">
                                         <rect key="frame" x="7" y="7" width="51" height="51"/>
                                         <state key="normal" image="Modem"/>
+                                        <connections>
+                                            <action selector="modemButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tOi-1k-gLj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -205,6 +183,34 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
                                         <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.84999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VWc-9d-Qbb">
+                                <rect key="frame" x="23" y="582" width="153" height="65"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="mhJ-Rf-Vvg">
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="65"/>
+                                        <state key="normal" title="Reiniciar (20s)">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="mhJ-Rf-Vvg" secondAttribute="bottom" id="0NP-Pm-Ds6"/>
+                                    <constraint firstItem="mhJ-Rf-Vvg" firstAttribute="leading" secondItem="VWc-9d-Qbb" secondAttribute="leading" id="269-wT-jOw"/>
+                                    <constraint firstAttribute="height" constant="65" id="Af3-7v-Olg"/>
+                                    <constraint firstAttribute="trailing" secondItem="mhJ-Rf-Vvg" secondAttribute="trailing" id="Oz9-Wr-IAJ"/>
+                                    <constraint firstAttribute="width" constant="153" id="YtD-WX-XhH"/>
+                                    <constraint firstItem="mhJ-Rf-Vvg" firstAttribute="top" secondItem="VWc-9d-Qbb" secondAttribute="top" id="vuk-MN-ntc"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.99999600649999998" green="1" blue="1" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -326,6 +332,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YIq-Kh-vo0">
                                                 <rect key="frame" x="7" y="15" width="51" height="54"/>
                                                 <state key="normal" title="Button" image="Light_Off"/>
+                                                <connections>
+                                                    <action selector="lightButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rcB-xJ-0Cg"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NeQ-bJ-Us0">
                                                 <rect key="frame" x="7" y="84" width="51" height="54"/>
@@ -417,6 +426,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="lightButton" destination="YIq-Kh-vo0" id="5gg-aI-4Mn"/>
+                        <outlet property="lightView" destination="uKL-9V-8qQ" id="5TP-xm-16f"/>
+                        <outlet property="modemView" destination="wi5-YT-Tyu" id="SLf-nD-ihn"/>
+                        <outlet property="restartView" destination="VWc-9d-Qbb" id="m7m-Il-Jw0"/>
+                        <outlet property="routerView" destination="w9H-mx-KT4" id="ysl-Xw-a9t"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

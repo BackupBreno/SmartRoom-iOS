@@ -7,7 +7,9 @@
 //
 
 import UIKit
+import RealmSwift
 
+let realmInstance = try! Realm()
 let baseURL = "http://192.168.0.13/"
 
 @UIApplicationMain
@@ -37,9 +39,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
-//        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.blueColor()]
         
         UINavigationBar.appearance().isOpaque = true
+        
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
         
         return true
     }

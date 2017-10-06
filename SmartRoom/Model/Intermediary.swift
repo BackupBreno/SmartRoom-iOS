@@ -1,8 +1,8 @@
 //
-//  Light.swift
+//  Intermediary.swift
 //  SmartRoom
 //
-//  Created by Breno Aquino on 01/10/2017.
+//  Created by Breno Aquino on 05/10/2017.
 //  Copyright © 2017 Breno Aquino. All rights reserved.
 //
 
@@ -10,9 +10,9 @@ import Foundation
 import RealmSwift
 import ObjectMapper
 
-class Light: Object, Mappable {
+class Intermediary: Object, Mappable {
     
-    @objc dynamic var state: Int = 0
+    @objc dynamic var state: Bool = false
     
     required convenience init?(map: Map) {
         
@@ -21,7 +21,7 @@ class Light: Object, Mappable {
     
     func mapping(map: Map) {
         
-        state   <-  map["active"]
+        state   <-  (map["active"], StateTransform())
     }
-    
 }
+

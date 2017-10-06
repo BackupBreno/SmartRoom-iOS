@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2928B1206CC1183CF7992555 /* Pods_SmartRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */; };
-		551544071F829307000B3E34 /* LightSystemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551544061F829307000B3E34 /* LightSystemService.swift */; };
+		551544071F829307000B3E34 /* LightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551544061F829307000B3E34 /* LightService.swift */; };
 		551C67C11F80873E005BC2E4 /* SideBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C01F80873E005BC2E4 /* SideBar.storyboard */; };
 		551C67C31F80875B005BC2E4 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */; };
 		551C67C51F8087E9005BC2E4 /* Strings.strings in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C41F8087E9005BC2E4 /* Strings.strings */; };
@@ -18,17 +18,22 @@
 		551C67CF1F808970005BC2E4 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67CC1F808970005BC2E4 /* Colors.swift */; };
 		551C67D11F808A05005BC2E4 /* PanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67D01F808A05005BC2E4 /* PanelViewController.swift */; };
 		551C67D31F808BAA005BC2E4 /* CustomSlideBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67D21F808BAA005BC2E4 /* CustomSlideBarController.swift */; };
+		5534AD091F8700D300A44691 /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD081F8700D300A44691 /* RoomService.swift */; };
+		5534AD0B1F87038F00A44691 /* Intermediary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD0A1F87038F00A44691 /* Intermediary.swift */; };
+		5534AD0E1F870CE700A44691 /* StateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD0D1F870CE700A44691 /* StateTransform.swift */; };
 		559094461F8177C500BFF74F /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559094451F8177C500BFF74F /* RequestFactory.swift */; };
-		559094491F8178AF00BFF74F /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559094481F8178AF00BFF74F /* Light.swift */; };
+		55A742861F85DD15006D9700 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A742851F85DD15006D9700 /* RouterService.swift */; };
+		55A7428A1F85DE29006D9700 /* ModemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A742891F85DE29006D9700 /* ModemService.swift */; };
 		55C3E3461F801DFC00174710 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C3E3451F801DFC00174710 /* AppDelegate.swift */; };
 		55C3E34B1F801DFC00174710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E3491F801DFC00174710 /* Main.storyboard */; };
 		55C3E34D1F801DFC00174710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E34C1F801DFC00174710 /* Assets.xcassets */; };
 		55C3E3501F801DFC00174710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E34E1F801DFC00174710 /* LaunchScreen.storyboard */; };
+		55E9FA821F8682F80087CABE /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9FA811F8682F80087CABE /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		551544061F829307000B3E34 /* LightSystemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightSystemService.swift; sourceTree = "<group>"; };
+		551544061F829307000B3E34 /* LightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightService.swift; sourceTree = "<group>"; };
 		551C67C01F80873E005BC2E4 /* SideBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideBar.storyboard; sourceTree = "<group>"; };
 		551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
 		551C67C41F8087E9005BC2E4 /* Strings.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Strings.strings; sourceTree = "<group>"; };
@@ -38,14 +43,19 @@
 		551C67CC1F808970005BC2E4 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		551C67D01F808A05005BC2E4 /* PanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PanelViewController.swift; sourceTree = "<group>"; };
 		551C67D21F808BAA005BC2E4 /* CustomSlideBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSlideBarController.swift; sourceTree = "<group>"; };
+		5534AD081F8700D300A44691 /* RoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
+		5534AD0A1F87038F00A44691 /* Intermediary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intermediary.swift; sourceTree = "<group>"; };
+		5534AD0D1F870CE700A44691 /* StateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTransform.swift; sourceTree = "<group>"; };
 		559094451F8177C500BFF74F /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
-		559094481F8178AF00BFF74F /* Light.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
+		55A742851F85DD15006D9700 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
+		55A742891F85DE29006D9700 /* ModemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModemService.swift; sourceTree = "<group>"; };
 		55C3E3421F801DFC00174710 /* SmartRoom.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmartRoom.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55C3E3451F801DFC00174710 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55C3E34A1F801DFC00174710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55C3E34C1F801DFC00174710 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55C3E34F1F801DFC00174710 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55C3E3511F801DFC00174710 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55E9FA811F8682F80087CABE /* Room.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Room.swift; sourceTree = "<group>"; };
 		70E313EF4B06BEB2BF2EB0E7 /* Pods-SmartRoom.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRoom/Pods-SmartRoom.debug.xcconfig"; sourceTree = "<group>"; };
 		9DEAFA549AF5F804A758017D /* Pods-SmartRoom.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmartRoom.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmartRoom/Pods-SmartRoom.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +111,14 @@
 			path = Generated;
 			sourceTree = "<group>";
 		};
+		5534AD0C1F870CD300A44691 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5534AD0D1F870CE700A44691 /* StateTransform.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		559094431F8177A100BFF74F /* Panel */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,7 +131,10 @@
 			isa = PBXGroup;
 			children = (
 				559094451F8177C500BFF74F /* RequestFactory.swift */,
-				551544061F829307000B3E34 /* LightSystemService.swift */,
+				551544061F829307000B3E34 /* LightService.swift */,
+				55A742851F85DD15006D9700 /* RouterService.swift */,
+				55A742891F85DE29006D9700 /* ModemService.swift */,
+				5534AD081F8700D300A44691 /* RoomService.swift */,
 			);
 			path = Service;
 			sourceTree = "<group>";
@@ -121,7 +142,8 @@
 		559094471F8178A700BFF74F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				559094481F8178AF00BFF74F /* Light.swift */,
+				55E9FA811F8682F80087CABE /* Room.swift */,
+				5534AD0A1F87038F00A44691 /* Intermediary.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -154,6 +176,7 @@
 				551C67BF1F808725005BC2E4 /* SideBar */,
 				559094471F8178A700BFF74F /* Model */,
 				559094441F8177B300BFF74F /* Service */,
+				5534AD0C1F870CD300A44691 /* Utils */,
 				551C67C81F8087FA005BC2E4 /* Generated */,
 				551C67BD1F808707005BC2E4 /* Supporting Files */,
 			);
@@ -334,16 +357,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				559094491F8178AF00BFF74F /* Light.swift in Sources */,
 				551C67CF1F808970005BC2E4 /* Colors.swift in Sources */,
-				551544071F829307000B3E34 /* LightSystemService.swift in Sources */,
+				55A742861F85DD15006D9700 /* RouterService.swift in Sources */,
+				551544071F829307000B3E34 /* LightService.swift in Sources */,
+				5534AD0B1F87038F00A44691 /* Intermediary.swift in Sources */,
 				551C67CE1F808970005BC2E4 /* Storyboards.swift in Sources */,
+				55A7428A1F85DE29006D9700 /* ModemService.swift in Sources */,
+				5534AD0E1F870CE700A44691 /* StateTransform.swift in Sources */,
 				551C67C31F80875B005BC2E4 /* SideBarTableViewController.swift in Sources */,
 				551C67D31F808BAA005BC2E4 /* CustomSlideBarController.swift in Sources */,
 				551C67CD1F808970005BC2E4 /* Strings.swift in Sources */,
+				5534AD091F8700D300A44691 /* RoomService.swift in Sources */,
 				559094461F8177C500BFF74F /* RequestFactory.swift in Sources */,
 				55C3E3461F801DFC00174710 /* AppDelegate.swift in Sources */,
 				551C67D11F808A05005BC2E4 /* PanelViewController.swift in Sources */,
+				55E9FA821F8682F80087CABE /* Room.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

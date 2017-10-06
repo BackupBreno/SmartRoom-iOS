@@ -11,10 +11,29 @@ import AlamofireObjectMapper
 
 class RequestFactory {
     
-    static func postLightState(state: Int) -> DataRequest? {
+    static func postLight(state: Int) -> DataRequest? {
         
         let params: Parameters = ["active" : state]
         
-        return Alamofire.request(baseURL + "ledVerde", method: .post, parameters: params, headers: nil)
+        return Alamofire.request(baseURL + "light", method: .post, parameters: params, headers: nil)
+    }
+    
+    static func postRouter(state: Int) -> DataRequest? {
+        
+        let params: Parameters = ["active" : state]
+        
+        return Alamofire.request(baseURL + "router", method: .post, parameters: params, headers: nil)
+    }
+    
+    static func postModem(state: Int) -> DataRequest? {
+        
+        let params: Parameters = ["active" : state]
+        
+        return Alamofire.request(baseURL + "modem", method: .post, parameters: params, headers: nil)
+    }
+    
+    static func getAllStates() -> DataRequest? {
+        
+        return Alamofire.request(baseURL + "allStates", method: .get, parameters: nil, headers: nil)
     }
 }
