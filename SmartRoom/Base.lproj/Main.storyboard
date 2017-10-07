@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HRL-UJ-a4s">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -446,18 +446,51 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="eig-97-nWE">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="0BY-QR-FC4">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="refreshAllStates:" destination="BYZ-38-t0r" id="zKV-FT-XRg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="airView" destination="pud-TT-QHb" id="jT7-CM-3G7"/>
+                        <outlet property="allThings" destination="e6x-IW-fy7" id="SH5-1C-bsy"/>
+                        <outlet property="gameMode" destination="SfR-KT-cXI" id="ov1-B8-FSp"/>
+                        <outlet property="generecView" destination="15t-ik-wwR" id="087-he-67q"/>
                         <outlet property="lightButton" destination="ZTx-5W-BWc" id="fvw-Px-iBk"/>
                         <outlet property="lightView" destination="yLy-Vx-naI" id="7dC-t5-xfe"/>
                         <outlet property="modemView" destination="wi5-YT-Tyu" id="SLf-nD-ihn"/>
+                        <outlet property="movieMode" destination="vEH-di-1eH" id="3eq-UB-39V"/>
                         <outlet property="restartView" destination="VWc-9d-Qbb" id="m7m-Il-Jw0"/>
                         <outlet property="routerView" destination="w9H-mx-KT4" id="ysl-Xw-a9t"/>
+                        <outlet property="sleepMode" destination="U2O-k0-og0" id="gRQ-QJ-Kiq"/>
+                        <outlet property="studyMode" destination="5vF-g4-QJP" id="5aU-bP-Jfi"/>
                         <outlet property="tvView" destination="hO7-mK-U45" id="b6g-LR-3pw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="33.733133433283363"/>
+            <point key="canvasLocation" x="372" y="33.733133433283363"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="bQv-fd-fQC">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HRL-UJ-a4s" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="P5u-l5-8J5">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9sw-F5-3n3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ctM-2r-MFE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-404" y="34"/>
         </scene>
     </scenes>
     <resources>

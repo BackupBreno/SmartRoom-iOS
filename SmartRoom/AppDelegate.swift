@@ -37,9 +37,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = UIColor(red: 80.0/255, green: 80.0/255, blue: 80.0/255, alpha: 1)
         
-        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
-        
         UINavigationBar.appearance().isOpaque = true
+        
+//        UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
+        
+        navigationControllerPanel.navigationBar.prefersLargeTitles = true
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         
         
         print(Realm.Configuration.defaultConfiguration.fileURL!)

@@ -10,7 +10,7 @@ import UIKit
 
 class SideBarTableViewController: UITableViewController {
 
-    var panelViewController: UIViewController!
+    var panelViewController: UINavigationController!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,8 @@ class SideBarTableViewController: UITableViewController {
         let controllerPanel = StoryboardScene.Main.panelViewControllerID.instantiate()
         
         self.panelViewController = UINavigationController(rootViewController: controllerPanel)
+        
+        self.panelViewController.navigationBar.prefersLargeTitles = true
         
         self.tableView.tableFooterView = UIView()
     }
@@ -44,6 +46,7 @@ class SideBarTableViewController: UITableViewController {
             self.slideMenuController()?.changeMainViewController(panelViewController, close: true)
             
         default:
+            
             break
         }
     }

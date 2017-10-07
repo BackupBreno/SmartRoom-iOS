@@ -17,17 +17,23 @@ class PanelViewController: UIViewController {
     var modemService: ModemService!
     
     var room: Room!
+    var isLoading: Bool = false
+    var isSuccess: Bool = false
     
-    @IBOutlet weak var lightView: UIView!
     @IBOutlet weak var lightButton: UIButton!
     
+    @IBOutlet weak var lightView: UIView!
     @IBOutlet weak var routerView: UIView!
-    
     @IBOutlet weak var modemView: UIView!
-    
     @IBOutlet weak var restartView: UIView!
-    
     @IBOutlet weak var tvView: UIView!
+    @IBOutlet weak var airView: UIView!
+    @IBOutlet weak var allThings: UIView!
+    @IBOutlet weak var sleepMode: UIView!
+    @IBOutlet weak var gameMode: UIView!
+    @IBOutlet weak var studyMode: UIView!
+    @IBOutlet weak var movieMode: UIView!
+    @IBOutlet weak var generecView: UIView!
     
     // MARK: - LifeCycle
     
@@ -47,9 +53,148 @@ class PanelViewController: UIViewController {
         self.room = Room.get()
         
         self.roomService.getAllStates()
+        self.isLoading = true
+        self.loadingEffect()
+    }
+    
+    // MARK: - General Function
+    
+    func reloadButtonsView() {
+        
+        self.turnWithEffect(view: self.lightView, toOn: self.room.lightIsOn, duration: 0.3, closure: {
+            
+            if self.room.lightIsOn {
+                
+                self.lightButton.setImage(#imageLiteral(resourceName: "Light_On"), for: .normal)
+                
+            } else {
+                
+                self.lightButton.setImage(#imageLiteral(resourceName: "Light_Off"), for: .normal)
+            }
+        })
+        
+        self.turnWithEffect(view: self.routerView, toOn: self.room.routerIsOn, duration: 0.3)
+        
+        self.turnWithEffect(view: self.modemView, toOn: self.room.modemIsOn, duration: 0.3)
+        
+        self.turnWithEffect(view: self.airView, toOn: self.room.airIsOn, duration: 0.3)
+    }
+    
+    func turnWithEffect(view: UIView, toOn: Bool, duration: Double, closure: (() -> ())? = nil) {
+        
+        UIView.animate(withDuration: duration) {
+            
+            if let closure = closure {
+                
+                closure()
+            }
+            
+            if toOn {
+                
+                view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+                
+            } else {
+                
+                view.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            }
+        }
+    }
+    
+    func turnAllEffect(toOn: Bool) {
+        
+        if toOn {
+            
+            self.lightView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.routerView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.modemView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.restartView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.tvView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.airView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.allThings.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.sleepMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.gameMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.studyMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.movieMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+            self.generecView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
+            
+        } else {
+            
+            self.lightView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.routerView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.modemView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.restartView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.tvView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.airView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.allThings.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.sleepMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.gameMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.studyMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.movieMode.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+            
+            self.generecView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
+        }
+    }
+    
+    func loadingEffect() {
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            
+            self.turnAllEffect(toOn: true)
+            
+        }) { (isEnd: Bool) in
+            
+            UIView.animate(withDuration: 0.3, animations: {
+                
+                self.turnAllEffect(toOn: false)
+                
+            }, completion: { (Bool) in
+                
+                if self.isLoading {
+                    
+                    self.loadingEffect()
+                    
+                } else {
+                    
+                    if !self.isSuccess {
+                        
+                        return
+                    }
+                    
+                    self.reloadButtonsView()
+                }
+            })
+        }
     }
     
     // MARK: - Actions
+    
+    @IBAction func refreshAllStates(_ sender: Any) {
+        
+        self.roomService.getAllStates()
+        self.isLoading = true
+        self.loadingEffect()
+    }
     
     @IBAction func lightButton(_ sender: Any) {
         
@@ -67,11 +212,19 @@ class PanelViewController: UIViewController {
         
         if self.room.routerIsOn {
             
-            self.routerService.postRouter(turnOnRouter: false)
+            let alert = UIAlertController(title: "Atenção!", message: "Ao desligar o roteador o sistema será desativado e só poderá voltar manualemente. Deseja desligar mesmo assim?", preferredStyle: .alert)
             
-        } else {
+            let alertCancel = UIAlertAction(title: "Cancelar", style: .default)
             
-            self.routerService.postRouter(turnOnRouter: true)
+            let alertOk = UIAlertAction(title: "Desligar", style: .destructive) { (UIAlerAction) in
+                
+                self.routerService.postRouter(turnOnRouter: false)
+            }
+            
+            alert.addAction(alertCancel)
+            alert.addAction(alertOk)
+            
+            self.present(alert, animated: true)
         }
     }
     
@@ -88,6 +241,8 @@ class PanelViewController: UIViewController {
     }
     
     @IBAction func tvPowerButton(_ sender: Any) {
+        
+        
     }
 }
 
@@ -97,10 +252,18 @@ extension PanelViewController: RoomServiceDelegate {
     
     func postRoomSuccess() {
         
+        self.isLoading = false
+        
+        self.isSuccess = true
+        
         self.room = Room.get()
     }
     
     func postRoomFailure() {
+        
+        self.isLoading = false
+        
+        self.isSuccess = false
         
         print("Room - Failure")
     }
@@ -113,28 +276,21 @@ extension PanelViewController: LightServiceDelegate {
         
         self.room = Room.get()
         
-        if self.room.lightIsOn {
+        self.turnWithEffect(view: self.lightView, toOn: self.room.lightIsOn, duration: 0.3, closure: {
             
-            UIView.animate(withDuration: 0.3, animations: {
+            if self.room.lightIsOn {
                 
                 self.lightButton.setImage(#imageLiteral(resourceName: "Light_On"), for: .normal)
                 
-                self.lightView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
-            })
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.3, animations: {
+            } else {
                 
                 self.lightButton.setImage(#imageLiteral(resourceName: "Light_Off"), for: .normal)
-                
-                self.lightView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
-            })
-        }
+            }
+        })
     }
     
     func postLightFailure() {
-        
+
         print("Light - Failure")
     }
 }
@@ -146,20 +302,7 @@ extension PanelViewController: RouterServiceDelegate {
         
         self.room = Room.get()
         
-        if self.room.routerIsOn {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.routerView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
-            })
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.routerView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
-            })
-        }
+        self.turnWithEffect(view: self.routerView, toOn: self.room.routerIsOn, duration: 0.3)
     }
     
     func postRouterFailure() {
@@ -175,20 +318,7 @@ extension PanelViewController: ModemServiceDelegate {
         
         self.room = Room.get()
         
-        if self.room.modemIsOn {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.modemView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.85)
-            })
-            
-        } else {
-            
-            UIView.animate(withDuration: 0.3, animations: {
-                
-                self.modemView.backgroundColor = #colorLiteral(red: 0.9999960065, green: 1, blue: 1, alpha: 0.3)
-            })
-        }
+        self.turnWithEffect(view: self.modemView, toOn: self.room.modemIsOn, duration: 0.3)
     }
     
     func postModemFailure() {
