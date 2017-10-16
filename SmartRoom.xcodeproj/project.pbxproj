@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2928B1206CC1183CF7992555 /* Pods_SmartRoom.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */; };
+		550ABE5C1F928DD6009B6A40 /* BlurEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ABE5A1F928DD5009B6A40 /* BlurEffect.swift */; };
+		550ABE5D1F928DD6009B6A40 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ABE5B1F928DD5009B6A40 /* Image.swift */; };
 		551544071F829307000B3E34 /* LightService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551544061F829307000B3E34 /* LightService.swift */; };
 		551C67C11F80873E005BC2E4 /* SideBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 551C67C01F80873E005BC2E4 /* SideBar.storyboard */; };
 		551C67C31F80875B005BC2E4 /* SideBarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */; };
@@ -21,6 +23,8 @@
 		5534AD091F8700D300A44691 /* RoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD081F8700D300A44691 /* RoomService.swift */; };
 		5534AD0B1F87038F00A44691 /* Intermediary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD0A1F87038F00A44691 /* Intermediary.swift */; };
 		5534AD0E1F870CE700A44691 /* StateTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5534AD0D1F870CE700A44691 /* StateTransform.swift */; };
+		556583371F95070B00A45AF3 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 556583361F95070B00A45AF3 /* BlurView.swift */; };
+		556583391F95071500A45AF3 /* BlurView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556583381F95071500A45AF3 /* BlurView.xib */; };
 		559094461F8177C500BFF74F /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 559094451F8177C500BFF74F /* RequestFactory.swift */; };
 		55A742861F85DD15006D9700 /* RouterService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A742851F85DD15006D9700 /* RouterService.swift */; };
 		55A7428A1F85DE29006D9700 /* ModemService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A742891F85DE29006D9700 /* ModemService.swift */; };
@@ -28,11 +32,17 @@
 		55C3E34B1F801DFC00174710 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E3491F801DFC00174710 /* Main.storyboard */; };
 		55C3E34D1F801DFC00174710 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E34C1F801DFC00174710 /* Assets.xcassets */; };
 		55C3E3501F801DFC00174710 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55C3E34E1F801DFC00174710 /* LaunchScreen.storyboard */; };
+		55CD70DD1F93AF730060C7B9 /* BlurButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 550ABE5F1F928E1A009B6A40 /* BlurButton.swift */; };
+		55CD70DE1F93AF7F0060C7B9 /* BlurButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 550ABE601F928E1A009B6A40 /* BlurButton.xib */; };
 		55E9FA821F8682F80087CABE /* Room.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E9FA811F8682F80087CABE /* Room.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		19AF67B48110483A22938F7F /* Pods_SmartRoom.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmartRoom.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		550ABE5A1F928DD5009B6A40 /* BlurEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurEffect.swift; sourceTree = "<group>"; };
+		550ABE5B1F928DD5009B6A40 /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		550ABE5F1F928E1A009B6A40 /* BlurButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurButton.swift; sourceTree = "<group>"; };
+		550ABE601F928E1A009B6A40 /* BlurButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurButton.xib; sourceTree = "<group>"; };
 		551544061F829307000B3E34 /* LightService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LightService.swift; sourceTree = "<group>"; };
 		551C67C01F80873E005BC2E4 /* SideBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SideBar.storyboard; sourceTree = "<group>"; };
 		551C67C21F80875B005BC2E4 /* SideBarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideBarTableViewController.swift; sourceTree = "<group>"; };
@@ -46,6 +56,8 @@
 		5534AD081F8700D300A44691 /* RoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomService.swift; sourceTree = "<group>"; };
 		5534AD0A1F87038F00A44691 /* Intermediary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Intermediary.swift; sourceTree = "<group>"; };
 		5534AD0D1F870CE700A44691 /* StateTransform.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTransform.swift; sourceTree = "<group>"; };
+		556583361F95070B00A45AF3 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		556583381F95071500A45AF3 /* BlurView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BlurView.xib; sourceTree = "<group>"; };
 		559094451F8177C500BFF74F /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 		55A742851F85DD15006D9700 /* RouterService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RouterService.swift; sourceTree = "<group>"; };
 		55A742891F85DE29006D9700 /* ModemService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModemService.swift; sourceTree = "<group>"; };
@@ -72,6 +84,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		550ABE5E1F928DFC009B6A40 /* Blur Outlets */ = {
+			isa = PBXGroup;
+			children = (
+				550ABE5F1F928E1A009B6A40 /* BlurButton.swift */,
+				550ABE601F928E1A009B6A40 /* BlurButton.xib */,
+				556583361F95070B00A45AF3 /* BlurView.swift */,
+				556583381F95071500A45AF3 /* BlurView.xib */,
+			);
+			path = "Blur Outlets";
+			sourceTree = "<group>";
+		};
 		551C67BD1F808707005BC2E4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,8 @@
 		5534AD0C1F870CD300A44691 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				550ABE5A1F928DD5009B6A40 /* BlurEffect.swift */,
+				550ABE5B1F928DD5009B6A40 /* Image.swift */,
 				5534AD0D1F870CE700A44691 /* StateTransform.swift */,
 			);
 			path = Utils;
@@ -176,6 +201,7 @@
 				551C67BF1F808725005BC2E4 /* SideBar */,
 				559094471F8178A700BFF74F /* Model */,
 				559094441F8177B300BFF74F /* Service */,
+				550ABE5E1F928DFC009B6A40 /* Blur Outlets */,
 				5534AD0C1F870CD300A44691 /* Utils */,
 				551C67C81F8087FA005BC2E4 /* Generated */,
 				551C67BD1F808707005BC2E4 /* Supporting Files */,
@@ -263,10 +289,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55CD70DE1F93AF7F0060C7B9 /* BlurButton.xib in Resources */,
 				55C3E3501F801DFC00174710 /* LaunchScreen.storyboard in Resources */,
 				55C3E34D1F801DFC00174710 /* Assets.xcassets in Resources */,
 				55C3E34B1F801DFC00174710 /* Main.storyboard in Resources */,
 				551C67C51F8087E9005BC2E4 /* Strings.strings in Resources */,
+				556583391F95071500A45AF3 /* BlurView.xib in Resources */,
 				551C67C11F80873E005BC2E4 /* SideBar.storyboard in Resources */,
 				551C67C71F8087F5005BC2E4 /* Colors.json in Resources */,
 			);
@@ -361,6 +389,7 @@
 				55A742861F85DD15006D9700 /* RouterService.swift in Sources */,
 				551544071F829307000B3E34 /* LightService.swift in Sources */,
 				5534AD0B1F87038F00A44691 /* Intermediary.swift in Sources */,
+				55CD70DD1F93AF730060C7B9 /* BlurButton.swift in Sources */,
 				551C67CE1F808970005BC2E4 /* Storyboards.swift in Sources */,
 				55A7428A1F85DE29006D9700 /* ModemService.swift in Sources */,
 				5534AD0E1F870CE700A44691 /* StateTransform.swift in Sources */,
@@ -368,8 +397,11 @@
 				551C67D31F808BAA005BC2E4 /* CustomSlideBarController.swift in Sources */,
 				551C67CD1F808970005BC2E4 /* Strings.swift in Sources */,
 				5534AD091F8700D300A44691 /* RoomService.swift in Sources */,
+				550ABE5D1F928DD6009B6A40 /* Image.swift in Sources */,
 				559094461F8177C500BFF74F /* RequestFactory.swift in Sources */,
 				55C3E3461F801DFC00174710 /* AppDelegate.swift in Sources */,
+				550ABE5C1F928DD6009B6A40 /* BlurEffect.swift in Sources */,
+				556583371F95070B00A45AF3 /* BlurView.swift in Sources */,
 				551C67D11F808A05005BC2E4 /* PanelViewController.swift in Sources */,
 				55E9FA821F8682F80087CABE /* Room.swift in Sources */,
 			);

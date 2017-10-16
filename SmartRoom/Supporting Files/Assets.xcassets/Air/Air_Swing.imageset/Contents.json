@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Fire.png",
+      "filename" : "Air_Swing.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Air_Swing-1.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Air_Swing-2.png",
       "scale" : "3x"
     }
   ],
